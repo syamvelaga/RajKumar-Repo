@@ -23,7 +23,7 @@ const getAllTodos = async (userId) => {
                 resolve(rows);
             });
         });
-        console.log('all todos: ', todos, userId)
+        // console.log('all todos: ', todos, userId)
         return todos;
     } catch (error) {
         console.error('Error fetching todos:', error.message);
