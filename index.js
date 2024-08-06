@@ -8,6 +8,12 @@ const todoRoutes = require('./routes/todoRoutes');
 
 env.config();
 
+const corsOptions = {
+    origin: 'http://localhost:3000', // Replace with your frontend's origin
+    optionsSuccessStatus: 200
+};
+
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -16,7 +22,7 @@ const startServer = async () => {
         await initDB(); // Wait for the database initialization to complete
 
         // Middlewares
-        app.use(cors()); // Enable CORS
+        app.use(cors(corsOptions)); // Enable CORS
         app.use(bodyParser.json()); // Parse JSON request bodies
 
         // Routes
