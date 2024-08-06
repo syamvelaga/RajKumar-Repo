@@ -31,7 +31,7 @@ const startServer = async () => {
 
         // Start the Express server
         app.listen(PORT, () => {
-            console.log(`Server running on port ${PORT}`);
+            console.log(`Server running1 on port ${PORT}`);
         });
     } catch (error) {
         console.error('Error initializing the database or starting the server:', error.message);
